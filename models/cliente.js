@@ -5,7 +5,8 @@ class Cliente {
     }
 
     validarCPF() {
-        let strCPF = this.cpf.replace(/\.|\-/g, "")
+        if (!this.cpf) return false;
+        let strCPF = this.cpf.replace(/\.|\-/g, "");
         var soma;
         var resto;
         soma = 0;

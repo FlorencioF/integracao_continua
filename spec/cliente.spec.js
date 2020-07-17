@@ -18,3 +18,9 @@ test('Validando o cpf', () => {
     cliente.cpf = '423.467.658-64';
     expect(cliente.validarCPF()).toBe(true);
 });
+
+test('Validando o cpf underfined', () => {
+    let cliente = new Cliente();
+    cliente.cpf = undefined;
+    expect(cliente.validarCPF()).toBe(false);
+});
